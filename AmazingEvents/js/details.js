@@ -8,7 +8,7 @@ const app = createApp( {
             listEvents:[],
             id:'',
             params:'',
-            esti:''
+            estiOrAssis:''
         
         }
     },
@@ -23,7 +23,7 @@ const app = createApp( {
                 console.log(this.id)
                 this.event=this.listEvents.find(event=>event._id.toString()===this.id);
                 console.log(this.event)
-                this.capacity = this.event.assistance ? "Assistance: " + this.event.assistance: "Estimate: " + this.event.estimate
+                this.estiOrAssis = this.event.assistance ? "Assistance: " + this.event.assistance: "Estimate: " + this.event.estimate
             } )
             .catch( err => console.log( err ) )
     },
