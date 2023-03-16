@@ -18,7 +18,6 @@ const app = createApp( {
             .then(({events})=>{
                 this.listEvents=events
                 this.filteredEvents=events
-                console.log(events)
                 this.categories  = [... new Set (events.map( event => event.category ))]
                 this.cargando=false  
             } )

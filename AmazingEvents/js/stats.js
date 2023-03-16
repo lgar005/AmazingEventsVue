@@ -40,13 +40,12 @@ const app= createApp({
                                     name1:this.eventAttendancePercentage[0].nameEvent, 
                                     name2:this.eventAttendancePercentage[this.eventAttendancePercentage.length-1].nameEvent, 
                                     name3:this.eventLargeCapacity[0].name})  
-                //_____________________________________---
-                
+              //Upcoming events
                 this.categories.map(category=>   
                 this.informationByCategoryP.push({
                     category:category,
                     events: this.upcomingEvents.filter(eventT=>eventT.category===category)
-            }))
+                }))
                 this.informationByCategoryP.map(datos=>{
                         this.dataUpcomingEvents.push({
                         category:datos.category,
@@ -54,47 +53,46 @@ const app= createApp({
                         capacity:datos.events.map(e=>e.capacity),
                         revenue:datos.events.map(e=>e.estimate * e.price)
                     })
-            }) 
+                 }) 
             this.dataUpcomingEvents.forEach(category=>{
-                let estimateUE= 0
-                category.estimate.forEach(estimate=>estimateUE+=Number(estimate))
-                category.estimate= estimateUE
-                let capacityUE=0
-                category.capacity.forEach(capacity=>capacityUE += Number(capacity))
-                category.capacity=capacityUE
-                let revenueUE=0
-                category.revenue.forEach(revenue=>revenueUE += revenue)
-                category.revenue=revenueUE
-                category.attendancePercentage= ((estimateUE*100)/capacityUE).toFixed(2)
-            })
-            this.dataUpcomingtEventsFill= this.dataUpcomingEvents.filter(element=> !element.attendancePercentage.includes("NaN"))   
-            //***************************************************** */
-            this.categories.map(category=>   
-                this.informationByCategoryU.push({
-                category:category,
-                events:this.pastEvents.filter(eventT=>eventT.category===category)
-            })) 
-            this.informationByCategoryU.map(datos=>{
-                this.dataPastEvents.push({
-                    category:datos.category,
-                    assistance:datos.events.map(e=>e.assistance),
-                    capacity:datos.events.map(e=>e.capacity),
-                    revenue:datos.events.map(e=>e.assistance * e.price)
-                 })
-         })
-     
-         this.dataPastEvents.forEach(category=>{
-             let assistancePE= 0;
-             category.assistance.forEach(assistance=>assistancePE +=Number(assistance))
-             category.assistance= assistancePE;
-             let capacityPE=0;
-             category.capacity.forEach(capacity=>capacityPE += Number(capacity))
-             category.capacity=capacityPE;
-             let revenuePE=0;
-             category.revenue.forEach(revenue=>revenuePE += revenue)
-             category.revenue=revenuePE;
-             category.attendancePercentage= ((assistancePE*100)/capacityPE).toFixed(2)
-         })
+                    let estimateUE= 0
+                    category.estimate.forEach(estimate=>estimateUE+=Number(estimate))
+                    category.estimate= estimateUE
+                    let capacityUE=0
+                    category.capacity.forEach(capacity=>capacityUE += Number(capacity))
+                    category.capacity=capacityUE
+                    let revenueUE=0
+                    category.revenue.forEach(revenue=>revenueUE += revenue)
+                    category.revenue=revenueUE
+                    category.attendancePercentage= ((estimateUE*100)/capacityUE).toFixed(2)
+                })
+                this.dataUpcomingtEventsFill= this.dataUpcomingEvents.filter(element=> !element.attendancePercentage.includes("NaN"))   
+            //past events
+                this.categories.map(category=>   
+                    this.informationByCategoryU.push({
+                    category:category,
+                    events:this.pastEvents.filter(eventT=>eventT.category===category)
+                })) 
+                this.informationByCategoryU.map(datos=>{
+                    this.dataPastEvents.push({
+                        category:datos.category,
+                        assistance:datos.events.map(e=>e.assistance),
+                        capacity:datos.events.map(e=>e.capacity),
+                        revenue:datos.events.map(e=>e.assistance * e.price)
+                    })
+                })
+                this.dataPastEvents.forEach(category=>{
+                    let assistancePE= 0;
+                    category.assistance.forEach(assistance=>assistancePE +=Number(assistance))
+                    category.assistance= assistancePE;
+                    let capacityPE=0;
+                    category.capacity.forEach(capacity=>capacityPE += Number(capacity))
+                    category.capacity=capacityPE;
+                    let revenuePE=0;
+                    category.revenue.forEach(revenue=>revenuePE += revenue)
+                    category.revenue=revenuePE;
+                    category.attendancePercentage= ((assistancePE*100)/capacityPE).toFixed(2)
+                })
             } )
             .catch( err => console.log( err ) )
     },
