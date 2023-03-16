@@ -1,0 +1,255 @@
+.logo{
+    width:"10px";
+    height:"10px";
+    object-fit: cover;
+}
+main{
+    min-height: 82vh;
+}
+.colorCheck{
+   background: aliceblue !important;
+}
+.colorMain{
+    background: linear-gradient(rgb(224, 224, 234),rgb(242, 224, 224))
+}
+.buttonNav{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color:#89e6e6;
+}
+
+.buttonsNavSpace{
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;   
+}
+.iconos{
+    width: 20rem;
+    height: 4.3rem;   
+}
+.icono{
+    width: 10px;
+    height: 1px;
+    object-fit: cover;
+}
+.colorIcono{
+    color:white;
+}
+.cine{
+    height: 195px !important;
+    width: 286px !important;
+    object-fit: cover !important;
+}
+.letterWhite{
+    color: white;
+    height: 4.3rem;
+    width: 9rem;
+    font-size:2rem;
+    text-align: center;
+}
+.size{
+    height: 100rem;
+    width: 5rem;
+    object-fit: cover;
+}
+.cardImage{
+    height: 13rem;
+   
+    object-fit: cover;
+}
+.sizeLi{
+    width: 18rem;
+    height: auto;
+}
+.fondoCarousel{
+    color: black;
+    background-color: rgb(213, 207, 214);
+    opacity: 0.8;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-inner{
+ height: 200px;
+}
+.colorTitleTable{
+    background-color: #7cdaf9;
+}
+#menssage{
+    resize: none;
+}
+.colorAqua{
+    border-color:aqua;
+}
+.colorFuchsia{
+    border-color: rgb(212, 57, 145);
+}
+.colorMainDetails{
+    background-color: aliceblue;
+}
+.imgDetails{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+}
+.fondDetails{
+    height: 30rem;
+    width: 54rem;
+    background: linear-gradient(to left, #7f7fd5, #86a8e7, #91eae4);
+    border-radius: 0.5rem;
+}
+.sizeP{
+    height:10rem;
+    width: 15rem;
+    
+}
+.sizePCards{
+    height: 4rem;
+}
+.colorAliceBlue{
+    background-color: aliceblue;
+}
+[v-cloak] {
+  display: none;
+}
+.table td, th {
+    text-align: center;
+    } 
+footer{
+    height: 10vh;
+    background-color:  rgb(38, 202, 213);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(min-width: 320px) and (max-width: 1023px){
+    .imgDetails{
+        height: 220px;
+        width: 220px;
+        object-fit: cover;
+    }
+    .buttonNav{
+        border-radius: 0rem;
+    }
+    .buttonsNavSpace{
+        width: auto;
+        justify-content: flex-start;  
+    }
+    .fondDetails{
+        height: 30rem;
+        width: 20rem;
+        
+    }
+    footer{
+        height:18vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width: 426px) and (max-width: 550px){
+    .carousel-caption{
+        height: 10rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    dl, dt, dd{
+        font-size: small;
+    }
+    .fondDetails{
+        height: 30rem;
+        width: 50rem;
+        
+    }
+
+}
+@media(min-width: 551px) and (max-width: 720px){
+    .carousel-caption{
+        height: 15rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    dl, dt, dd{
+        font-size: small;
+    }
+    .fondDetails{
+        height: 30rem;
+        width: 50rem;
+        
+    }
+
+}
+@media(min-width: 721px) and (max-width: 850px){
+    .carousel-caption{
+        height: 20rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    dl, dt, dd{
+        font-size: small;
+    }
+    .fondDetails{
+        height: 30rem;
+        width: 50rem;
+        
+    }
+
+}
+@media(min-width: 851px) and (max-width: 950px){
+    .carousel-caption{
+        height: 25rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    dl, dt, dd{
+        font-size: small;
+    }
+    .fondDetails{
+        height: 30rem;
+        width: 50rem;
+        
+    }
+}
+@media(min-width: 950px) and (max-width: 1024px){
+    .carousel-caption{
+        height: 30rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    
+}
+@media(min-width: 1025px){
+    .carousel-caption{
+        height: 45rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+    
+}
+@media(min-width: 320px) and (max-width: 1023px){
+    .colorCheck{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media(min-width: 320px) and (max-width: 1423px){
+    .formC{
+        width: 30rem;
+        border-radius: 0.2rem;
+    }    
+}
+@media(min-width: 1424px) {
+    .formC{
+        width: 40rem;
+        border-radius: 0.2rem;
+    }
+}
